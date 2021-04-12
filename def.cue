@@ -1,6 +1,7 @@
 package spin
 
 #Base: {
+	application:        string
 	dockerAccount?:     string
 	kubernetesAccount?: string
 	gcsAccount?:        string
@@ -10,7 +11,8 @@ package spin
 #Pipeline: {
 	#Base
 
-	id: string
+	id:          string
+	application: string
 
 	stages: [...#Stage]
 	triggers: [...#Trigger]

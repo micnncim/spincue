@@ -16,6 +16,8 @@ spinPipelines: {
 }
 
 _spinPipeline: X: spin: {
+	name:        X.id
+	application: base.application
 	stages: [
 		for k, x in X.stages {
 			if x._type == "deploy" {
