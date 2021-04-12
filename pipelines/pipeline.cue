@@ -1,6 +1,7 @@
 package spin
 
 base: {
+	application:       "api"
 	dockerAccount:     "docker-account-1"
 	kubernetesAccount: "kubernetes-account-1"
 	gcsAccount:        "gcs-account-1"

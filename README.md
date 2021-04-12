@@ -30,6 +30,7 @@ Spinnaker pipeline templates implemented by pure CUE.
 ## Examples
 
 ```cue
+base: application: "api"
 pipeline: minimal: stages: [{manualJudgement: {}}]
 ```
 
@@ -38,6 +39,8 @@ pipeline: minimal: stages: [{manualJudgement: {}}]
 
 ```json
 {
+  "name": "minimal",
+  "application": "api",
   "stages": [
     {
       "type": "manualJudgment",
@@ -60,6 +63,7 @@ pipeline: minimal: stages: [{manualJudgement: {}}]
 
 ```cue
 base: {
+    application:       "api"
     dockerAccount:     "docker-account-1"
     kubernetesAccount: "kubernetes-account-1"
     gcsAccount:        "gcs-account-1"
@@ -99,6 +103,8 @@ pipeline: nginx: {
 
 ```json
 {
+  "name": "nginx",
+  "application": "api",
   "stages": [
     {
       "type": "manualJudgment",
